@@ -15,7 +15,8 @@ $(document).ready(function () {
         maxZoom: 18
     });
 
-    var aeroLayer = L.tileLayer('http://212.122.182.109/tiles/aero_3857/{z}/{x}/{y}.png');
+//    var aeroLayer = L.tileLayer('http://212.122.182.109/tiles/aero_3857/{z}/{x}/{y}.png');
+    var aeroLayer = L.tileLayer('http://hui.ivanatora.info/aero_3857/{z}/{x}/{y}.png');
 
     var baseLayers = {
         'OpenStreetMap': osmLayer,
