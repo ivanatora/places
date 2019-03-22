@@ -23,7 +23,7 @@ $(document).ready(function () {
         'BGMountains': bgmLayer,
         'Aero': aeroLayer
     }
-    L.control.layers(baseLayers).addTo(map);
+    L.control.layers(baseLayers, null, {collapsed: false}).addTo(map);
 
     L.control.scale().addTo(map);
 
