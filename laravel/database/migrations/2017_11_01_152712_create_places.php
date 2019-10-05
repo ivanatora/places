@@ -45,7 +45,7 @@ class CreatePlaces extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->unsignedInteger('place_id');
-            $table->string('url', 255)->default('');
+            $table->text('url');
             $table->string('title', 255)->default('');
             $table->boolean('is_blog')->default(0);
 

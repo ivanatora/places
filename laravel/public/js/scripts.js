@@ -15,13 +15,16 @@ $(document).ready(function () {
         maxZoom: 18
     });
 
+    var bingLayer = L.tileLayer.bing("AogEFsgDKcHKH2cXOoeX6GA0F2B7sl8ZzQPJr71VWpy1cDQma-KI8mUZ57w9uRKo");
+
 //    var aeroLayer = L.tileLayer('http://212.122.182.109/tiles/aero_3857/{z}/{x}/{y}.png');
     var aeroLayer = L.tileLayer('http://hui.ivanatora.info/aero_3857/{z}/{x}/{y}.png');
 
     var baseLayers = {
         'OpenStreetMap': osmLayer,
         'BGMountains': bgmLayer,
-        'Aero': aeroLayer
+        'Bing': bingLayer,
+        'Aero': aeroLayer,
     }
     L.control.layers(baseLayers, null, {collapsed: false}).addTo(map);
 

@@ -109,7 +109,6 @@ class PlacesService
                 if (stristr($url, 'blog.ivanatora.info')) {
                     $oRecordLink->is_blog = 1;
                 }
-
                 $oRecordLink->save();
             }
 
@@ -139,7 +138,7 @@ class PlacesService
         if (isset($this->titleMap[$url])) {
             return $this->titleMap[$url];
         }
-        $str = file_get_contents($url);
+        $str = @file_get_contents($url);
 
         print "GET TITLE: $url\n";
 
@@ -153,6 +152,7 @@ class PlacesService
 
             return $title;
         }
+	return '';
     }
 
     public function resolveCategory($name)

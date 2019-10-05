@@ -80,6 +80,7 @@
 <script src="/js/leaflet.uGeoJSON.js"></script>
 <script src="/js/leaflet-hash.js"></script>
 <script src="/js/jquery.tristate.js"></script>
+<script src="/js/leaflet-bing-layer.min.js"></script>
 <script src="/js/scripts.js?ts=<?= time() ?>"></script>
 </body>
 </html>
