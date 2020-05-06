@@ -20,11 +20,14 @@ $(document).ready(function () {
 //    var aeroLayer = L.tileLayer('http://212.122.182.109/tiles/aero_3857/{z}/{x}/{y}.png');
     var aeroLayer = L.tileLayer('http://hui.ivanatora.info/aero_3857/{z}/{x}/{y}.png');
 
+    var esriLayer = L.tileLayer('https://clarity.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
+
     var baseLayers = {
         'OpenStreetMap': osmLayer,
         'BGMountains': bgmLayer,
         'Bing': bingLayer,
         'Aero': aeroLayer,
+        'Esri Clarity': esriLayer,
     }
     L.control.layers(baseLayers, null, {collapsed: false}).addTo(map);
 
